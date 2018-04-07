@@ -15,10 +15,10 @@
 
         {% block beforehead %} {% endblock %}
     </head>
-    <body>
-        <nav class="uk-navbar uk-nvbar-attached uk-margin-bottom">
+    <body style="background-image:url(/static/img/3.png);background-position:center;background-repeat:repeat-y;">
+        <nav class="uk-navbar uk-navbar-attached uk-margin-bottom" style="background-image:url(/static/img/2.jpg);background-position:center;background-repeat:repeat-y">
             <div class="uk-container uk-container-center">
-                <a href="/" class="uk-navbar-brand">My Blog</a>
+                <a href="/" class="uk-navbar-brand">Mikazuki</a>
                 <ul class="uk-navbar-nav">
                     <li data-url="blogs"><a href="/"><i class="uk-icon-home"></i>日志</a></li>
                     <li><a target="_blank" href="#"><i class="uk-icon-book"></i>杂谈</a></li>
@@ -49,14 +49,15 @@
             </div>
         </nav>
         
-        <div class="uk-container uk-container-center">
+        <div class="uk-container uk-container-center" style="background:rgba(255,255,255,0.3)">
             <div class="uk-grid">
                 {% block content %}
                 {% endblock %}
             </div>
         </div>
 
-        <div class="uk-margin-large-top" style="background-color:#eee;border-top:1px solid #ccc;">
+     <!--   <div class="uk-margin-large-top" style="background-color:#eee;border-top:1px solid #ccc;">-->
+        <div class="uk-margin-large-top" style="background-image:url(/static/img/2.jpg);background-position:center;background-repeat:repeat-y">
             <div class="uk-container uk-containner-center uk-text-center">
                 <div class="uk-panel uk-margin-top uk-margin-bottom">
                     <p>
