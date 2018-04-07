@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        {% block meta %} {% endblock %}
+        <title>{% block title %} ? {% endblock %} - My Blog</title>
+        <link rel="stylesheet" href="/static/css/uikit.min.css">
+        <link rel="stylesheet" href="/static/css/uikit.gradient.min.css">
+        <link rel="stylesheet" href="/static/css/awesome.css" />
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/sha1.min.js"></script>
+        <script src="/static/js/uikit.min.js"></script>
+        <script src="/static/js/sticky.min.js"></script>
+        <script src="/static/js/vue.min.js"></script>
+        <script src="/static/js/awesome.js"></script>
+
+        {% block beforehead %} {% endblock %}
+    </head>
+    <body>
+        <nav class="uk-navbar uk-nvbar-attached uk-margin-bottom">
+            <div class="uk-container uk-container-center">
+                <a href="/" class="uk-navbar-brand">My Blog</a>
+                <ul class="uk-navbar-nav">
+                    <li data-url="blogs"><a href="/"><i class="uk-icon-home"></i>日志</a></li>
+                    <li><a target="_blank" href="#"><i class="uk-icon-book"></i>杂谈</a></li>
+                    <li><a target="_blank" href="#"><i calss="uk-icon-code"></i>代码</a></li>
+                </ul>
+                <div class="uk-navbar-flip">
+                    <ul class="uk-navbar-nav">
+                    {% if __user__ %}
+                        <li class="uk-parent" data-uk-dropdown>
+                            <a href="#0"><i class="uk-icon-user"></i> {{ __user__.name }}</a>
+                            <div class="uk-dropdown uk-dropdown-navbar">
+                                <ul class="uk-nav uk-nav-navbar">
+                                    <li><a href="/signout"><i class="uk-icon-sign-out"></i>LogOut</a></li>    
+                        {% if __user__.admin %}            
+                                    <li><a href="/manage/blogs/create"><i class="uk-icon-sign-out"></i>Write Blogs </a></li>
+                                    <li><a href="/manage/blogs"><i class="uk-icon-sign-out"></i>Manager </a></li>
+                        {% endif %}
+                                </ul>
+                            </div>
+                        </li>    
+
+                    {% else %}
+                        <li><a href="/signin"><i class="uk-icon-sign-in"></i>Sign In</a></li>
+                        <li><a href="/register"><i class="uk-icon-edit"></i>Resister</a></li>
+                    {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+        <div class="uk-margin-large-top" style="background-color:#eee;border-top:1px solid #ccc;">
+            <div class="uk-container uk-containner-center uk-text-center">
+                <div class="uk-panel uk-margin-top uk-margin-bottom">
+                    <p>
+                        <a target="_blank" href="#" class="uk-icon-button uk-icon-weibo"></a>
+                        <a target="_blank" href="#" class="uk-icon-button uk-icon-github"></a>
+                        <a target="_blank" href="#" class="uk-icon-button uk-icon-linkedin-square"></a>
+                        <a target="_blank" href="#" class="uk-icon-button uk-icon-twitter"></a>
+                    </p>
+                    <p>Powered by <a href="#">My Blog</a>.Copyright &copy; 2018. [<a href="/manage/" target="_blank">Manage</a>]</p>
+                    <p><a href="http://www.baidu.com" target="_blank">www.test.com</a>.All rights reserved.</p>
+                    <a target="_blank" href="#"><i class="uk-icon-html5" style="font-size:64px;color:#444;"></i></a>
+                </div>
+
+            </div>
+        </div>
+    
+    </body>
+
+
+</html>
