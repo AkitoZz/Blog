@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import asyncio, os, inspect, logging, functools
 
 from urllib import parse

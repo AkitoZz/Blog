@@ -21,16 +21,16 @@
                 <a href="/" class="uk-navbar-brand">Mikazuki</a>
                 <ul class="uk-navbar-nav">
                     <li data-url="blogs"><a href="/"><i class="uk-icon-home"></i>日志</a></li>
-                    <li><a target="_blank" href="#"><i class="uk-icon-book"></i>杂谈</a></li>
-                    <li><a target="_blank" href="#"><i calss="uk-icon-code"></i>代码</a></li>
+                <!--    <li><a target="_blank" href="#"><i class="uk-icon-book"></i>杂谈</a></li>
+                    <li><a target="_blank" href="#"><i calss="uk-icon-code"></i>代码</a></li>-->
                 </ul>
                 <div class="uk-navbar-flip">
                     <ul class="uk-navbar-nav">
                     {% if __user__ %}
                         <li class="uk-parent" data-uk-dropdown>
                             <a href="#0"><i class="uk-icon-user"></i> {{ __user__.name }}</a>
-                            <div class="uk-dropdown uk-dropdown-navbar">
-                                <ul class="uk-nav uk-nav-navbar">
+                            <div class="uk-dropdown uk-dropdown-navbar" style="background-image:url(/static/img/2.jpg);background-position:center;background-repeat:repeat-y">
+                                <ul class="uk-nav uk-nav-navbar" >
                                     <li><a href="/signout"><i class="uk-icon-sign-out"></i>LogOut</a></li>    
                         {% if __user__.admin %}            
                                     <li><a href="/manage/blogs/create"><i class="uk-icon-sign-out"></i>Write Blogs </a></li>
@@ -61,13 +61,13 @@
             <div class="uk-container uk-containner-center uk-text-center">
                 <div class="uk-panel uk-margin-top uk-margin-bottom">
                     <p>
-                        <a target="_blank" href="#" class="uk-icon-button uk-icon-weibo"></a>
-                        <a target="_blank" href="#" class="uk-icon-button uk-icon-github"></a>
-                        <a target="_blank" href="#" class="uk-icon-button uk-icon-linkedin-square"></a>
-                        <a target="_blank" href="#" class="uk-icon-button uk-icon-twitter"></a>
+                        <a target="_blank" href="https://m.weibo.cn/p/1005052445628001" class="uk-icon-button uk-icon-weibo"></a>
+                        <a target="_blank" href="https://github.com/AkitoZz" class="uk-icon-button uk-icon-github"></a>
+                    <!--    <a target="_blank" href="#" class="uk-icon-button uk-icon-linkedin-square"></a>
+                        <a target="_blank" href="#" class="uk-icon-button uk-icon-twitter"></a>-->
                     </p>
-                    <p>Powered by <a href="#">My Blog</a>.Copyright &copy; 2018. [<a href="/manage/" target="_blank">Manage</a>]</p>
-                    <p><a href="http://www.baidu.com" target="_blank">www.test.com</a>.All rights reserved.</p>
+                    <p>Powered by <a href="#">Mikazuki</a>.Copyright &copy; 2018. </p>
+                    <p><a href="http://www.akazuki.com" target="_blank">www.akazuki.com</a>.All rights reserved.</p>
                     <a target="_blank" href="#"><i class="uk-icon-html5" style="font-size:64px;color:#444;"></i></a>
                 </div>
 

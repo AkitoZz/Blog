@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import config_default
 
 class Dict(dict):

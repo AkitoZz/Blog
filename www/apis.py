@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import json,logging,inspect,functools
 
 class APIError(Exception):
